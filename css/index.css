@@ -640,6 +640,7 @@ footer::after {
 		transform: translate(0, 0);
 		margin-top: 28px;
 		width: 118px;
+		z-index: 101;
 	}
 	header h1 a {
 		display: block;

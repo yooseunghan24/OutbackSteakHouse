@@ -11,7 +11,7 @@ const nav = document.querySelector('nav');
 window.addEventListener('resize', function(){
 	let windowWidth = window.innerWidth;
 	/* 네비게이션 */
-	if(windowWidth >= 1024) {
+	if(window.innerWidth >= 1024) {
 		nav.style.transform = 'translateX(0)';
 	} else {
 		nav.style.transform = 'translateX(-100%)';
@@ -39,8 +39,26 @@ window.addEventListener('resize', function(){
 	} else {
 		header.classList.remove('headerOn');
 	}
+	if(window.innerWidth >= 1024) {
+		$('.gnb > li').hover(function(){
+			$(this).find('.sub_menu').stop().slideDown();
+		},function(){
+			$(this).find('.sub_menu').stop().slideUp();
+		})
+		$('.gnb > li > a').focus(function() { // 탭버튼으로 메뉴 선택하기
+			$(this).siblings().stop().slideDown();
+		});
+		$('.sub_menu li:last-child a').blur(function() {
+			$('.sub_menu').stop().slideUp();
+		})
+		$('.navback').fadeOut();
+	} else {
+		//$('.gnb > li').off();
+		$('.submenu_title').click(clickMenu);
+	}
 }) // 여기까지 resize
-let windowWidth = window.innerWidth
+
+let windowWidth = window.innerWidth;
 /* 헤더 색깔 변경 */
 window.addEventListener('scroll', function() {
 	if(window.innerWidth < 1023) {
