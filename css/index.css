@@ -1,9 +1,6 @@
 @charset "utf-8";
 /* mobile first로 제작 되었음. */
-.pc_header_height {
-	display: none;
-}
-.mobile_none, .pc_delivery, .menu_arrow {
+.pc_header_height, .mobile_none, .pc_delivery, .menu_arrow {
 	display: none;
 }
 section h2 {
@@ -356,7 +353,8 @@ nav {
 .benefit {
 	height: 310px;
 	background: url(../img/benefit.jpg) no-repeat;
-	background-size: 100% auto;
+	background-size: 54%;
+	background-attachment: fixed;
 	padding: 35px 0;
 }
 .benefit_heading p {
@@ -616,9 +614,13 @@ footer::after {
 .footer_bottom p a {
 	color: #aaa;
 }
+/* 데스크탑 */
 @media (min-width: 1024px) {
 	.pc_none {
 		display: none;
+	}
+	.mobile_none {
+		display: block;
 	}
 	.pc_header_height {
 		display: block;
