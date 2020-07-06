@@ -353,8 +353,7 @@ nav {
 .benefit {
 	height: 310px;
 	background: url(../img/benefit.jpg) no-repeat;
-	background-size: 54%;
-	background-attachment: fixed;
+	background-size: cover;
 	padding: 35px 0;
 }
 .benefit_heading p {
@@ -907,9 +906,11 @@ footer::after {
 	.benefit {
 		width: 1024px;
 		margin: 0 auto;
-		background-position: center;
 		height: 420px;
 		position: relative;
+		background-position: center;
+		background-size: 1024px;
+	  background-attachment: fixed;
 	}
 	.tomato {
 		display: block;
