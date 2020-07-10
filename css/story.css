@@ -1,0 +1,343 @@
+@charset "utf-8";
+.sub_title span {
+  display: inline-block;
+  position: absolute;
+  top: calc(50% + 28px);
+  left:50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.sub_title span::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background: #fff;
+  bottom: 10px;
+  left: 49%;
+  transform: translateX(-50%);
+}
+.story_wrap {
+  background: url(../img/m_story_contents.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.story {
+  padding: 110px 15px;
+}
+.story > h2 {
+  width: 100%;
+  text-align: center;
+}
+.story > h2 img {
+  width: 66%;
+}
+.story > p, .story_list h3, .story_list span {
+  color: #c7b19b;
+}
+.story_list {
+  margin-top: 80px;
+}
+.story_list li {
+  position: relative;
+}
+.story_list li::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 25px;
+  background: #fff;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: .8;
+}
+.story_list li::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.story_list > li:not(:first-child) {
+  margin-top: 70px;
+}
+.story_list h3 {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+.story_list p, .story_list h4 {
+  color: #fff;
+}
+.story_list p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.story_1988 div p {
+  color: #999;
+  font-size: 12px;
+}
+.story_2013 div {
+  margin-top: 10px;
+}
+.record {
+  display: flex;
+  position: relative;
+}
+.record::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.record::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  top:43px;
+  left: 50%;
+  width: 2px;
+  height: 13px;
+  transform: translateX(-50%) rotate(45deg);
+}
+.record > div {
+  width: 50%;
+  padding: 0 10px;
+}
+.record > div:first-child {
+  text-align: right;
+}
+.record > div:last-child {
+  text-align: left;
+}
+.record em {
+  color: #b10a11;
+  font-style: normal;
+  font-size: 26px;
+}
+.record h4 {
+  letter-spacing: 2px;
+  position: relative;
+  padding-top: 10px;
+}
+.record > div:first-child h4 {
+  padding-right: 10px;
+}
+.record > div:last-child h4 {
+  padding-left: 10px;
+}
+@media (min-width: 768px) {
+  .story > p {
+    font-size: 20px;
+  }
+  .story_list h3 {
+    font-size: 40px;
+  }
+  .story_list span {
+    font-size:20px;
+  }
+  .story_list p {
+    font-size: 16px;
+  }
+  .story_1988 div p {
+    font-size: 14px;
+  }
+  .record {
+    font-size: 18px;
+  }
+  .record em {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .story_list h3, .story_list li::after, .story_list li::before {
+    display: none;
+  }
+  .sub_title {
+    height: 600px;
+    background: url(../img/story_bg.jpg) no-repeat center;
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    z-index: -1;
+  }
+  .sub_title span {
+    font-size: 70px;
+    letter-spacing: 13px;
+    top: 50%;
+  }
+  .sub_title span::after {
+    width: 220px;
+    bottom: 25px;
+  }
+  .imsi {
+    height: 600px;
+  }
+  .lnb {
+    height: 50px;
+    width: 100%;
+    background: #fff;
+  }
+  .brand_contents_wrap {
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    position: relative;
+  }
+  .effect {
+    position: absolute;
+    transform: translate(100%, 100%);
+    animation: effect 2s 1s forwards;
+    width: 1878px;
+    height: 1710px;
+    top:0;
+    left: 0;
+    background: url(../img/story_effect.png) no-repeat;
+  }
+  @keyframes effect {
+    to {
+      transform: translate(0,0);
+    }
+  }
+  .story_wrap {
+    background: url(../img/story_contents.jpg) no-repeat;
+    width: 1600px;
+    height: 2285px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    text-align: start;
+  }
+  .story_list {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+  }
+  .story_list > li:not(:first-child) {
+    margin-top: 0;
+  }
+  .story_list > li {
+    width: 50%;
+    position: relative;
+  }
+  .story_list span {
+    font-size: 28px;
+    font-family: 'Roboto';
+  }
+  .story_1980, .story_1997 {
+    text-align: right;
+    padding-right: 100px;
+  }
+  .story_1988, .story_2013 {
+    text-align: left;
+    padding-left: 100px;
+  }
+  .center_line {
+    position: absolute;
+    top: -100px;
+  }
+  .center_line::before {
+    content: '';
+    opacity: .5;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+  }
+  .story_1980 .center_line,
+  .story_1997 .center_line {
+    right: 0;
+    height: 120px;
+  }
+  .story_1988 .center_line,
+  .story_2013 .center_line {
+    left: 0;
+    height: 120px;
+  }
+  .story_2013 {
+    top: -240px;
+  }
+  .story {
+    padding: 200px 0 0;
+    margin: auto;
+  }
+  .story > p {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  .year_wrap {
+    color: #c7b19b;
+    font-size: 50px;
+    position: relative;
+  }
+  .year_wrap::after {
+    content: '';
+    position: absolute;
+    top: 33px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+  }
+  .story_1980 .year_wrap::after, .story_1997 .year_wrap::after {
+    right: -120px;
+  }
+  .story_1988 .year_wrap::after, .story_2013 .year_wrap::after {
+    left: -120px;
+  }
+  .story_2013 div {
+    text-align: center;
+  }
+  .year {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .story_1988, .story_2013 {
+    margin-left: 50%;
+  }
+  .story_1988 .year , .story_2013 .year {
+    justify-content: flex-start;
+  }
+  .num {
+    overflow: hidden;
+    height: 86px;
+  }
+  .num ul li {
+    font-family: 'Roboto';
+    font-size: 86px;
+    font-weight: bold;
+  }
+  .record {
+    left: -541px;
+    font-size: 40px;
+    width: 885px;
+  }
+  .record em {
+    font-size: 80px;
+  }
+  .story_1988 div p {
+    font-size: 16px;
+  }
+  .shortcut {
+    width: 1180px;
+    margin: auto;
+    padding: 0;
+    top: -60px;
+  }
+}
